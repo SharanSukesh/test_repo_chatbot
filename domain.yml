@@ -1,0 +1,122 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - contact_company
+  #- book_appointment
+  - location_query
+  - specific_location_question
+  - utter_name
+  #- name
+  #- name_entry
+  - email_entry
+  - phone_entry
+  - booking_datetime
+  - booking_confirmation_yes
+  - booking_confirmation_no
+  - specific_location_booking
+
+actions:
+    - action_hospital_locations
+    - action_check_name
+
+entities:
+    - location
+    - name
+    - number
+    - email
+    - booking_location
+    - booking_time
+    - booking_date
+
+slots:
+    name:
+        type: text
+    number:
+        type: text
+    email:
+        type: text
+    booking_location:
+        type: text
+    booking_time:
+        type: text
+    booking_date:
+        type: text
+    location:
+        type: text
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+
+  utter_name_greet:
+  - text: "Hey there! Before we continue, could you please tell me your name?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, how can I help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, or am I?"
+  
+  utter_locations:
+  - text: "We have hospitals at the following locations: Bangalore, Mumbai, Delhi. Where would you like to book a hospital?"
+
+  utter_contact:
+  - text: "Please let us know your e-mail or phone number so that we can get in contact with you"
+
+  utter_appointment:
+  - text: "Sure! Please enter the date on which you want to book an appointment below"
+  
+  utter_name:
+  - text: "Alright {name}, how can I help you?"
+  
+  utter_booking_time:
+  - text: "Okay, and at what date and time would you like to book the appointment?"
+  
+  utter_appointment_confirmation:
+  - text: "Thanks, so let me confirm one last time, are these details correct? \n Name: {name} \n Location: {location} \n Address: {booking_location} \n Date: {booking_date} \n Time: {booking_time}"
+  
+  utter_booking_confirmed:
+  - text: "All done! Your booking is done"
+  
+  utter_please_rephrase:
+  - text: "I'm sorry, I didn't quite understand that. Could you please try to rephrase?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+#slots:
+#  company:
+#    type: unfeaturized
+#  job_function:
+#    type: unfeaturized
+#  person_name:
+#    type: unfeaturized
+#  budget:
+#    type: unfeaturized
+#  business_email:
+#    type: unfeaturized
+#  use_case:
+#    type: unfeaturized
+    
+#forms:
+#  - sales_form
