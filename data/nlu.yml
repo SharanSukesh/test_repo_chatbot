@@ -1,0 +1,272 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - morning
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hows it going
+    - whats up?
+    - are you there?
+   # - Hi im [Sharan](name)
+   # - Hello my name is [Alex](name) 
+   # - I am [Epstein](name)
+   # - I'm [Kratos](name), how are you?
+   # - My name is [Nicky](name), I would like some help
+   # - Hi call me [Nick Cage](name)
+   # - My name is [Sharan](name)
+#    - The name is [Kasparov](name)
+ #   - You can call me [Bob](name)
+  #  - Please call me [Stan](name)
+   # - Hi please call me [Satan](name)
+    #- My name is [Eric](name)
+#    - I am [Sharan](name)
+ #   - They call me [Blade](name)
+  #  - You can call me [John](name)
+   # - [Bobby](name) is my name
+    #- [Daniel](name)
+#    - The name is [Bond](name)
+ #   - I'm [Harry](name)
+  #  - My name [Jeff](name)
+   # - I am [Karen](name) and I want to speak with your manager
+    #- I am called [Jeffery](name)
+#    - [Charles](name)
+ #   - [Zachariah](name)
+  #  - [Sharan](name) Sukesh
+   # - Myself is [Trump](name)
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - cya
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you a real person?
+    - what are you?
+
+- intent: contact_company
+  examples: |
+    - I wanna talk to your sales people
+    - Can i talk to a real person?
+    - I would like to speak with someone
+    - Please schedule a sales call
+    - I want to get in touch with your company
+    - what are you?
+
+
+- intent: location_query
+  examples: |
+    - Where do you have hospitals?
+    - Which all locations are you in?
+    - How can I find a hospital?
+    - Show all locations please
+    - Help me find a hospital
+    - I want to visit your hospital
+    - I want to come to your hopsital
+    - All locations
+    - I want to book an appointment
+    - How do I book an appointment?
+    - What is the process to book an appointment?
+    - I would like ot book an appointment
+    - Please help me book an appointment
+    - Hi I would like to book an appointment
+    - Hello please help me book an appointment
+    - Yes I want to have a consultation
+    - I need to book a consultation
+    - Can you tell me where all you have outlets?
+    - I wanna to book an appointment
+    - I want to get in touch with a doctor
+    - How can i speak with a doctor?
+    - I want to have a check up
+    - doctor please
+    - I want help
+    - I want treatment
+    - book an appointment for me
+    - How can I book an appointment?
+    - Hi I want to book an appointment
+
+- intent: specific_location_booking
+  examples: |
+#    - I want to book an appointment at the [address1](booking_location) branch
+#    - Please give me appointment in [random address](booking_location) location
+##    - [hospital address](booking_location)
+#   - [bangalore address](booking_location) please
+#    - Help me book a hospital in [RT Nagar](booking_location) location
+#    - I want an appointment in Bangalore at the [Jayanagar](booking_location)
+#    - The one in Mumbai at the [MG Road](booking_location) location
+#    - In the [Domlur](booking_location) in Bangalore.
+#    - Book a appointment for me in Delhi in the [Whitefield](booking_location).
+#    - The [Indiranagar 4th cross](booking_location) sounds good.
+#    - [Victoria Road](booking_location)
+    
+#- intent: booking_datetime
+#  examples: |
+#    - On the [12th of November](booking_date) at [1:30PM](booking_time)
+#    - I want to book on the [3rd of August](booking_date) in the evening at [5:30](booking_time)
+#    - Please book it for [20th March](booking_date) in the morning at [6](booking_time)
+#    - Make the appointment at [2:00](booking_time) in the afternoon on the [1st of October](booking_date)
+##    - Make it at [3](booking_time) in the evening on the [11th of January](booking_date)
+ #   - at [4:00](booking_time) in the morning on [23rd February](booking_date)
+ #   - [20th July](booking_date) at [1:30PM](booking_time) 
+ #   - [4PM](booking_time) on [30th December](booking_date)
+ #   - Book it for me on [23rd June](booking_date) at [2:45](booking_time)
+ #   - Book on [3rd November](booking_date) [1:30PM](booking_time)
+ #   - [3rd July](booking_date) [11:30AM](booking_time)
+ #   - [6 o'clock](booking_time) [1st of December](booking_date)
+ #   - Schedule the appointment for [1 o'clock](booking_time) on the [13th of April](booking_date)
+ #   - [3rd January](booking_date) at [4:35](booking_time)
+ #   - [2nd February](booking_date) at [6 o'clock](booking_time)
+ #   - [6pm](booking_time) on the [3rd March](booking_date)
+ #   - [3:00](booking_time) [12th October](booking_date)
+
+
+- intent: specific_location_question
+  examples: |
+#    - I want to book an appointment in the [Bangalore](location) hospital
+#    - Can you please book an appointment at the [Mysore](location) branch?
+#    - Book in the [Mumbai](location) location
+#    - Reserve a timing in the [Mumbai](location) hospital please
+#    - Help me book a slot in the [Delhi](location) branch
+#    - Get me a booking in [Bangalore](location) hospital
+#    - Can I book an meeting in [Mumbai](location)?
+#    - I want a booking in [Delhi](location) location
+#    - I need to book a consulatation in the [Bangalore](location) bangalore branch
+#    - I want to consult a doctor in [Delhi](location)
+#    - In [Mumbai](location) I want to book an appointment
+#    - In [Delhi](location) please save a consultation for me
+#    - [Bangalore](location) please
+#    - [Mumbai](location)
+#    - I think i will take the [Bangalore](location) location
+#    - If you can book the [Mumbai](location) office
+    
+- intent: booking_confirmation_yes
+  examples: |
+    - Yes, that sounds about right
+    - Okay
+    - Correct
+    - You are right
+    - You can use those details
+    - Seems right
+    - that is right
+    - ok you can proceed with those details
+    - ya book that
+    - sure
+    - Ofcourse go ahead
+    - Please book with these details only
+    - yes Okay
+    - proceed
+    - thank you it sounds right
+    - thanks
+    - go ahead
+    - yes
+    - ok
+    - Yes
+    - Go head
+    - Book it
+    - Yup
+    - Ye
+    - Yus
+    
+- intent: booking_confirmation_no
+  examples: |
+    - no that is not correct
+    - not right
+    - change it please
+    - That is incorrect
+    - This is not the right details
+    - nope
+    - no
+    - does not seem to be right
+    - please change it
+    - no this is not right
+    - the details are incorrect
+    - i have entered the wrong details
+    - its a mistake
+    - there is a mistake
+    
+- intent: email_entry
+  examples: |
+#    - My email is [sharansukesh@hotmail.com](email)
+#    - You can reach me at [randomvalue123@hotmail.com](email)
+#    - Please mail me on [sharansukesh.94@gmail.com](email)
+#    - It is [wonderwall@yahoo.com](email)
+#    - It is [wonderwalloasis@woohoo.com](email)
+#    - [jefferyepsteindidit@accenture.com](email)
+#    - mail ID is [rasaexample@nlu.com](email)
+#    - [rasatraining@example.com](email)
+#    - [rasatesting@example.com](email)
+#    - I want you to email me at [thisemail@protonmail.com]
+#    - My mail is [hopethisworks.75@bot.com]
+    
+- intent: phone_entry
+  examples: |
+#    - Yes my phone number is [9986543221](number)
+#    - Phone number is [1324534667](number)
+#    - You can call me on [9382819678](number)
+#    - My mobile number is [6371950112](number)
+#    - [8412467115](number) is my number
+#    - [5489205245](number)
+#    - reach me on [8431245684](number)
+#    - my phone is [5478421534](number)
+#    - Call me on [6582374124](number)
+#    - my phone number is [3456787667](number)

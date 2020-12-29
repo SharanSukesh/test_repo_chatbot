@@ -1,0 +1,174 @@
+version: "2.0"
+
+stories:
+
+- story: full_booking_1
+  steps:
+  - intent: greet
+  - action: action_check_name
+  - intent: location_query
+  - action: utter_locations
+  - intent: specific_location_question
+  - action: action_hospital_locations
+  - intent: specific_location_booking
+  - action: utter_booking_time
+  - intent: booking_datetime
+  - action: utter_appointment_confirmation
+  - intent: booking_confirmation_yes
+  - action: utter_booking_confirmed
+#  - action: utter_goodbye
+
+- story: full_booking_2
+  steps:
+  - intent: greet
+  - action: action_check_name
+  - intent: location_query
+  - action: utter_locations
+  - intent: specific_location_question
+  - action: action_hospital_locations
+  - intent: specific_location_booking
+  - action: utter_booking_time
+  - intent: booking_datetime
+  - action: utter_appointment_confirmation
+  - intent: booking_confirmation_no
+  - action: utter_locations
+  - intent: specific_location_question
+  - action: action_hospital_locations
+  - intent: specific_location_booking
+  - action: utter_booking_time
+  - intent: booking_datetime
+  - action: utter_appointment_confirmation
+  - intent: booking_confirmation_yes
+  - action: utter_booking_confirmed
+  #- action: utter_goodbye
+
+- story: full_booking_3
+  steps:
+  - intent: greet
+  - action: action_check_name
+  - intent: location_query
+  - action: utter_locations
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: full_booking_4
+  steps:
+  - intent: greet
+  - action: action_check_name
+  - intent: specific_location_question
+  - action: action_hospital_locations
+  - intent: specific_location_booking
+  - action: utter_booking_time
+  - intent: booking_datetime
+  - action: utter_appointment_confirmation
+  - intent: booking_confirmation_yes
+  - action: utter_booking_confirmed
+  #- action: utter_goodbye
+  
+- story: full_booking_5
+  steps:
+  - intent: greet
+  - action: action_check_name
+  - intent: specific_location_question
+  - action: action_hospital_locations
+  - intent: specific_location_booking
+  - action: utter_booking_time
+  - intent: booking_datetime
+  - action: utter_appointment_confirmation
+  - intent: booking_confirmation_no
+  - action: utter_locations
+  - intent: specific_location_question
+  - action: action_hospital_locations
+  - intent: specific_location_booking
+  - action: utter_booking_time
+  - intent: booking_datetime
+  - action: utter_appointment_confirmation
+  - intent: booking_confirmation_yes
+  - action: utter_booking_confirmed
+#  - action: utter_goodbye
+
+
+#- story: name appointment location booking
+#  steps:
+#  - intent: greet
+#  - action: utter_name_greet
+#  - intent: name_entry
+#  - action: utter_name
+#  - intent: location_query
+#  - action: utter_locations
+#  - intent: specific_location_booking
+#  - action: action_hospital_locations
+#  - action: utter_goodbye
+  #- intent: specific_location_booking
+  #- action: action_hospital_locations
+  #- intent: book_appointment
+  #- action: utter_appointment
+  #- action: utter_goodbye
+
+#- story: appointment booking
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#  - intent: book_appointment
+#  - action: utter_appointment
+#  - action: utter_goodbye
+  
+#- story: appointment location query
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#  - intent: specific_location_booking
+#  - action: action_hospital_locations
+#  - action: utter_goodbye
+  
+#- story: appointment location query booking
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#  - intent: location_query
+#  - action: utter_locations
+#  - intent: specific_location_booking
+#  - action: action_hospital_locations
+#  - action: utter_goodbye
+  #- intent: specific_location_booking
+  #- action: action_hospital_locations
+  #- intent: book_appointment
+  #- action: utter_appointment
+  #- action: utter_goodbye
+
+
+
+############################### OLDER ONES #########################
+
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+
+-# story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+# - intent: deny
+#  - action: utter_goodbye

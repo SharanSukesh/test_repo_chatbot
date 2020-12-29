@@ -1,0 +1,57 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: List all locations if user asks specific location question
+  steps:
+  - intent: specific_location_question
+  - action: action_hospital_locations
+
+- rule: Ask about booking time next
+  steps:
+  - intent: booking_datetime
+  - action: utter_appointment_confirmation
+  
+- rule: Finalize appointment if confirmed
+  steps:
+  - intent: booking_confirmation_yes
+  - action: utter_booking_confirmed
+  
+- rule: Reask details if not confirmed
+  steps:
+  - intent: booking_confirmation_no
+  - action: utter_locations
+  
+- rule: Reask details if not confirmed
+  steps:
+  - intent: specific_location_booking
+  - action: utter_booking_time
+  
+- rule: Ask for name if not
+  steps:
+  - intent: greet
+  - action: action_check_name
+
+- rule: Show all locations
+  steps:
+  - intent: location_query
+  - action: utter_locations
+  
+- rule: Ask the user to rephrase
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  
+  
+  
+  
